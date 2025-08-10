@@ -29,19 +29,31 @@ button {
 
 .video-item {
     background-color: #fff;
-    padding: 10px;
     border-radius: 5px;
-    text-align: center;
+    overflow: hidden;
     width: 100%;
-    max-width: 200px;
+    max-width: 150px;
+    text-align: center;
+}
+
+.video-item img {
+    width: 100%;
+    height: auto;
+    filter: blur(5px); /* Blur for NSFW compliance */
+    transition: filter 0.3s;
+}
+
+.video-item img:hover {
+    filter: none; /* Unblur on hover/tap */
+}
+
+.video-item p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #333;
 }
 
 a {
-    color: blue;
     text-decoration: none;
-    font-size: 14px;
-}
-
-a:hover {
-    text-decoration: underline;
+    display: block;
 }
