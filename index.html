@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JAV Mini App</title>
-    <link rel="stylesheet" href="style.css">  <!-- Links to your CSS -->
-    <script src="https://telegram.org/js/telegram-web-app.js?59"></script>  <!-- Telegram script -->
-    <script src="script.js" defer></script>  <!-- Your JS, "defer" loads it after HTML -->
+    <title>JAV Myanmar Mini App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js?59"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div id="age-gate">
-        <h1>Welcome! This is 18+ Content</h1>
-        <p>You must verify your age to continue.</p>
+        <h1>Welcome to JAV Myanmar!</h1>
+        <p>This is 18+ content. Verify your age to continue.</p>
         <button id="verify-button">Verify Age</button>
     </div>
-    <div id="content" style="display: none;">  <!-- Hidden until verified -->
-        <h1>Your JAV Videos</h1>
-        <p>Click to visit your website:</p>
-        <a href="https://javmyanmar.com" target="_blank">Go to Site</a>
-        <!-- Add more links or previews here -->
+    <div id="content" style="display: none;">
+        <h1>JAV Myanmar Videos</h1>
+        <p>Explore videos on javmyanmar.com:</p>
+        <!-- Static links to your website -->
+        <div class="video-grid">
+            <div class="video-item">
+                <a href="https://javmyanmar.com" target="_blank">Visit JAV Myanmar Home</a>
+            </div>
+            <div class="video-item">
+                <a href="https://javmyanmar.com/category/popular" target="_blank">Popular Videos</a>
+            </div>
+            <div class="video-item">
+                <a href="https://javmyanmar.com/category/new" target="_blank">New Releases</a>
+            </div>
+            <!-- Add more links as needed -->
+        </div>
+        <!-- Placeholder for dynamic content (if using API) -->
+        <div id="dynamic-content"></div>
     </div>
 </body>
 </html>
