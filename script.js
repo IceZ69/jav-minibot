@@ -11,22 +11,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const verifyButton = document.getElementById('verify-button');
     verifyButton.addEventListener('click', function() {
         tg.openTelegramLink('https://t.me/age_verification_bot');
-        // Show content after verification (simplified; real apps check bot response)
+        // Show content after verification (simplified)
         document.getElementById('age-gate').style.display = 'none';
         document.getElementById('content').style.display = 'block';
     });
 
-    // Optional: Fetch videos from javmyanmar.com API (if available)
-    // Replace with your API URL if you have one
+    // Optional: Fetch posts from javmyanmar.com API (if available)
+    // Replace with your real API URL
     /*
-    fetch('https://javmyanmar.com/api/videos') // Example API endpoint
+    fetch('https://javmyanmar.com/api/videos')
         .then(response => response.json())
         .then(data => {
             const content = document.getElementById('dynamic-content');
             data.videos.forEach(video => {
                 const item = document.createElement('div');
                 item.className = 'video-item';
-                item.innerHTML = `<a href="${video.url}" target="_blank">${video.title}</a>`;
+                item.innerHTML = `
+                    <a href="${video.url}" target="_blank">
+                        <img src="${video.thumbnail}" alt="${video.title}">
+                        <p>${video.title}</p>
+                    </a>
+                `;
                 content.appendChild(item);
             });
         })
