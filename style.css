@@ -6,39 +6,49 @@ body {
     color: #000;
 }
 
-h1, p {
+h1 {
     text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    margin: 10px 0;
 }
 
 button {
-    background-color: blue;
+    background-color: #007bff;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    max-width: 300px;
     font-size: 16px;
+    display: block;
+    margin: 0 auto;
 }
 
 .video-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 10px;
 }
 
 .video-item {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     overflow: hidden;
-    width: 100%;
-    max-width: 150px;
-    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .video-item img {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 200px;
+    object-fit: cover; /* Ensures images fill space without distortion */
     filter: blur(5px); /* Blur for NSFW compliance */
     transition: filter 0.3s;
 }
@@ -47,10 +57,16 @@ button {
     filter: none; /* Unblur on hover/tap */
 }
 
-.video-item p {
-    margin: 5px 0;
+.video-title {
     font-size: 12px;
+    font-weight: bold;
     color: #333;
+    margin: 8px 5px;
+    text-align: center;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Prevents title wrapping */
 }
 
 a {
